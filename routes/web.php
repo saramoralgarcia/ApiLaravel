@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\clienteController;
+use App\Models\cliente;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('clientes', clienteController::class);// sustituye todas las lineas de codigo de abajo.
+
+// Route::get('/inicio', [clienteController::class, 'index']);
+// Route::get('/crear', [clienteController::class, 'create']);
+// Route::get('/actualizar', [clienteController::class, 'update']);
+// Route::get('/insertar', [clienteController::class, 'store']);
+// Route::get('/borrar', [clienteController::class, 'destroy']);
+
